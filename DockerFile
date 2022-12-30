@@ -5,8 +5,6 @@ WORKDIR /var/www/html
 RUN unzip bonativo.zip
 rum rm -rf bonativo.zip &&\
     cp -rf bonativo/* . &&\
-    rm -rf bonativo &&\
-    mkdir gaurav &&\
-    touch gaurav/gaurav.txt
+    rm -rf bonativo 
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
