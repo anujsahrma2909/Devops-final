@@ -3,7 +3,7 @@ RUN yum install httpd zip unzip -y
 ADD https://www.free-css.com/assets/files/free-css-templetes/download/page269/bonativo.zip /var/www/html
 WORKDIR /var/www/html
 RUN unzip bonativo.zip
-rum rm -rf bonativo.zip &&\
+RUN rm -rf bonativo.zip &&\
     cp -rf bonativo/* . &&\
     rm -rf bonativo 
 EXPOSE 80
